@@ -1,3 +1,8 @@
+_G.ScriptName = "Mystic Scripts"
+_G.FirstText = "Loading Script Library"
+_G.SecondText = "Waiting For Server Reply"
+_G.ThirdText = "Do Not Leave,It Will Crash Your Game"
+
 --// Loading UI
 local Loading = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -182,15 +187,11 @@ local function SNUMK_fake_script()
 	local tip = script.Parent
 	while true do
 		wait(5)
-		tip.Text = "Getting Assets..."
+		tip.Text = _G.FirstText
 		wait(5)
-		tip.Text = "Do you know PS1?"
+		tip.Text = _G.SecondText
 		wait(5)
-		tip.Text = "Bypassing..."
-		wait(5)
-		tip.Text = "Playing monopoly"
-		wait(5)
-		tip.Text = "Loading..."
+		tip.Text = _G.ThirdText
 	end
 end
 coroutine.wrap(SNUMK_fake_script)()
